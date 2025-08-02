@@ -5,9 +5,10 @@ const userRoutes = require("./routes/userRoutes");
 app.use(express.json());
 app.use("/api/users", userRoutes);
 app.get("/", (req, res) => {
-  res.send("User Service API");
+  res.send("Welcome to the E-commerce API!");
 });
-const PORT = process.env.PORT || 3001; // Port unik
+const PORT = process.env.PORT || 3000; // Port unik
 app.listen(PORT, () => {
-  console.log(`User Service running on port ${PORT}`);
+   console.log(`Server running on port ${PORT}`);
+   console.log(`Access API at http://localhost:${PORT}/api`);
 });
